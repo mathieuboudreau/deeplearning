@@ -4,12 +4,12 @@
 set -e
 
 # Make pdfs of all chapter tex files
-pdflatex chapter_*/*.tex
+pdflatex -output-directory=pdfs chapter_*/*.tex
 
 # Clean pdflatex outputs (that aren't *.pdf)
-rm -f *.aux
-rm -f *.out
-rm -f *.log
+rm -f pdfs/*.aux
+rm -f pdfs/*.out
+rm -f pdfs/*.log
 
 # Reset error checking flag
 set +e
