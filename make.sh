@@ -4,7 +4,7 @@
 set -e
 
 # Make pdfs of all chapter tex files
-pdflatex -output-directory=pdfs chapter_*/*.tex
+pdflatex -output-directory=pdfs tex/*.tex
 
 # Clean pdflatex outputs (that aren't *.pdf)
 rm -f pdfs/*.aux
